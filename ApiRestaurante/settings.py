@@ -37,12 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',    
+    'rest_framework',  
+    'drf_yasg',  
     'simple_history',    
     'users',
     'base',
     'productos',
 ]
+
+SWAGGER_SETTINGS = {
+    'DOC_EXPANSION':'none'
+    
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
