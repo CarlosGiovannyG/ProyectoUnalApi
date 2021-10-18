@@ -6,12 +6,12 @@ from rest_framework.response import Response
 
 from base.api import GeneralListApiView
 from productos.api.serializers.product_serializers import ProductSerializer
-
+from users.authentication_mixin import Authetication
 
 
 
 '''MODO DE TRABAJO CON VIWSET ESTO HACE QUE CON UNA SOLA RUTA SE HAGA TODO EL CRUD '''
-class ProductViewSet(viewsets.ModelViewSet):
+class ProductViewSet(Authetication, viewsets.ModelViewSet):
   serializer_class = ProductSerializer
 
 

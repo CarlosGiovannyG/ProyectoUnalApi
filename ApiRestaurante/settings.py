@@ -53,7 +53,7 @@ SWAGGER_SETTINGS = {
 
 
 
-MIDDLEWARE = [
+MIDDLEWARE = [   
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,6 +84,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ApiRestaurante.wsgi.application'
 
+TOKEN_EXPIRED_AFTER_SECONDS = 900
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
