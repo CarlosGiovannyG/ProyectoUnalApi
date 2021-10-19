@@ -79,7 +79,7 @@ class Product(ModeloBase):
 
   name=models.CharField('Nombre de Producto',max_length=150,unique=True,blank=False,null=False)
   description=models.TextField('Descripcion de Producto',blank=False,null=False)
-  image=models.CharField('Imagen de Perfil',max_length=500,null=True,blank=True)
+  image = models.ImageField('Imagen del Producto', upload_to='products/',blank = True,null = True)
   category_product=models.ForeignKey(CategoryProduct,on_delete=models.CASCADE,verbose_name='Categoria de Prodcuto',null=True)
   meausre_unit=models.ForeignKey(MeasureUnit,on_delete=models.CASCADE,verbose_name='Unidad de Medida',null=True)
   historical=HistoricalRecords()
