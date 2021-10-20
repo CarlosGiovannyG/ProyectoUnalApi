@@ -36,7 +36,7 @@ class User(AbstractBaseUser,PermissionsMixin):
   username=models.CharField('Nombre de usuario',max_length=150,unique=True)
   email= models.EmailField('Correo electronico',max_length=150, unique=True)
   name = models.CharField('Nombre',max_length=150, blank=True,null=True)
-  last_name = models.CharField('Apillido',max_length=150,blank=True,null=True)
+  last_name = models.CharField('Apellido',max_length=150,blank=True,null=True)
   image = models.ImageField('Imagen de perfil', upload_to='perfil/', max_length=255, null=True, blank = True)
   is_active = models.BooleanField(default=True)
   is_staff = models.BooleanField(default=False)
